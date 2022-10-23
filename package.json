@@ -5,7 +5,7 @@
   "main": "src/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "ts-node-dev src/main.ts",
+    "dev": "ts-node-dev --respawn --transpile-only --exit-child --watch src src/main.ts",
     "run": "tsc && node public/main.js",
     "build": "tsc"
   },
@@ -13,6 +13,7 @@
   "author": "Alok P",
   "license": "ISC",
   "devDependencies": {
+    "@types/cors": "^2.8.12",
     "@types/express": "^4.17.14",
     "@types/node": "^18.11.2",
     "ts-node-dev": "^2.0.0",
@@ -20,6 +21,7 @@
   },
   "dependencies": {
     "@prisma/client": "4.5.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "prisma": "^4.5.0"
